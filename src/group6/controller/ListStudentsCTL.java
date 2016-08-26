@@ -4,6 +4,13 @@ import group6.module.student.StudentMap;
 import group6.module.student.StudentManager;
 import group6.IModule.IStudentLister;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Controller class
+ * It used to populate the repository/also some sort of search is performed
+ */
+
 public class ListStudentsCTL {
     private StudentManager sm;
     public ListStudentsCTL() {sm = StudentManager.get();}

@@ -2,6 +2,14 @@ package group6.IModule;
 
 import group6.module.student.StudentUnitRecordList;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Unit interface 
+ * Includes set of getters and setters and also calculates weight of
+ * assignments
+ */
+
 public interface IUnit {
 
     public String getUnitCode();

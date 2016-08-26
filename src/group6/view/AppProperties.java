@@ -1,6 +1,15 @@
 package group6.view;
 import java.util.*;
 import java.io.*;
+
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * UI Class  
+ * It is used to have a reference to the UI and it instantiate an object for the view.
+ * Through this class, when application is launched it gets access to the XML file location.
+ */
+
 public class AppProperties {
     private static AppProperties self = null;
     private Properties properties;

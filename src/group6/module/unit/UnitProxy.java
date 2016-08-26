@@ -5,6 +5,13 @@ import group6.IModule.IStudentUnitRecord;
 import group6.module.student.StudentUnitRecordList;
 import group6.module.unit.UnitManager;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Module Class  
+ * Purpose of this class is yet to be identified. 
+ */
+
 public class UnitProxy implements IUnit {
 private String UC;
         private String un;

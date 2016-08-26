@@ -4,6 +4,14 @@ import group6.IModule.IUnit;
 import group6.IModule.IStudentUnitRecord;
 import group6.module.student.StudentUnitRecordList;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Module Class  
+ * It is used to handle course/subject details. Furthermore, it is used to evaluate 
+ * student's grade.
+ */
+
 public class Unit implements IUnit {
 	private String uc;
 	private String UN;

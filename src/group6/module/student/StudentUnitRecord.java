@@ -3,6 +3,13 @@ package group6.module.student;
 import group6.IModule.IStudentUnitRecord;
 import group6.module.unit.UnitManager;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Module Class  
+ * It is keeping record of the students grades and also performs a light calculation.
+ */
+
 public class StudentUnitRecord implements IStudentUnitRecord {
 	private Integer sid;
 	private String uc;

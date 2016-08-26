@@ -9,6 +9,15 @@ import org.jdom.output.XMLOutputter;
 import java.io.IOException;
 import org.jdom.JDOMException;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * XML Manager
+ * This class is used to search through XML file and also save data within the
+ * same XML document. 
+ * XML document is located at the parent directory of the program.
+ */
+
 public class XMLManager {
     private static XMLManager self = null;
     

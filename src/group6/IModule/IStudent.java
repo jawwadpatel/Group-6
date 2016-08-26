@@ -2,6 +2,13 @@ package group6.IModule;
 
 import group6.module.student.StudentUnitRecordList;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Student interface 
+ * Includes getter and setter properties
+ */
+
 public interface IStudent {
 
     public Integer getID();

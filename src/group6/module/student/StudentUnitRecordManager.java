@@ -5,6 +5,13 @@ import group6.controller.XMLManager;
 import java.util.List;
 import org.jdom.*;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Module Class  
+ * Manages student's records within the XML file.
+ */
+
 public class StudentUnitRecordManager {
 
 private static StudentUnitRecordManager s = null;
