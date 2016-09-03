@@ -1,5 +1,12 @@
 package group6.IModule;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Student Unit Record interface 
+ * Used to assign/retrieve records to/from Student object
+ */
+
 public interface IStudentUnitRecord {
 
     public Integer getStudentID();

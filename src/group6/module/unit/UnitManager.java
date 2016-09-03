@@ -7,6 +7,13 @@ import group6.controller.XMLManager;
 import java.util.List;
 import org.jdom.*;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Module Class  
+ * This class managed courses details within XML file.
+ */
+
 public class UnitManager {
 
 	private static UnitManager self = null;

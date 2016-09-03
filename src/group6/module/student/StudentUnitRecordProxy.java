@@ -2,6 +2,13 @@ package group6.module.student;
 
 import group6.IModule.IStudentUnitRecord;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Module Class  
+ * Purpose of this class is yet to be identified. 
+ */
+
 public class StudentUnitRecordProxy implements IStudentUnitRecord {
 private Integer studentID;
 private String unitCode;

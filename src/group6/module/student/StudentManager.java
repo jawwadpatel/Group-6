@@ -7,6 +7,14 @@ import group6.IModule.IStudentUnitRecord;
 import group6.controller.XMLManager;
 import org.jdom.*;
 import java.util.List;
+
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Module Class  
+ * It is directly linked to the XML file to set/get records from that file.
+ */
+
 public class StudentManager {
     private static StudentManager self = null;
     

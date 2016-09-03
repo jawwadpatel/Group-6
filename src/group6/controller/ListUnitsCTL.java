@@ -4,6 +4,13 @@ import group6.module.unit.UnitManager;
 import group6.module.unit.UnitMap;
 import group6.IModule.IUnitLister;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Controller class
+ * Performs manager's unit retrieval  
+ */
+
 public class ListUnitsCTL {
     private UnitManager um;
     public ListUnitsCTL() {

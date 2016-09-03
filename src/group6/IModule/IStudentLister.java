@@ -1,7 +1,10 @@
 package group6.IModule;
 
 /**
- * @author jtulip
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * StudentLister interface class
+ * Repository interface
  */
 
 public interface IStudentLister {

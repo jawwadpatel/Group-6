@@ -3,6 +3,13 @@ package group6.module.student;
 import group6.IModule.IStudent;
 import group6.IModule.IStudentUnitRecord;
 
+/**
+ * @author      Mojtaba Jafari
+ * @version     1.0                 
+ * Module Class  
+ * Purpose of this class is yet to be identified. 
+ */
+
 public class StudentProxy implements IStudent {
 private Integer I;
 private String l;
