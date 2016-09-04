@@ -7,6 +7,14 @@ import group6.controller.XMLManager;
 import java.util.List;
 import org.jdom.*;
 
+/**
+ * @author      Abdul Jawwad Patel
+ * @version     1.0                 
+ * Module Class  
+ * It is used to handle course/subject details. Furthermore, it is used to evaluate 
+ * student's grade.
+ */
+
 public class UnitManager {
 
 	private static UnitManager self = null;
