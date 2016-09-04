@@ -39,7 +39,7 @@ public class Unit implements IUnit {
 		rs = rl == null ? new StudentUnitRecordList() : rl;
 	}
         
-        // Getter and setter methods are used inorder to set value and get value.
+        // Getter and setter methods are used inorder to set value and get value from each fields.
 	public String getUnitCode() {
 		return this.uc;
 	}
