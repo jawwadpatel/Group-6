@@ -4,6 +4,15 @@ import group6.IModule.IUnit;
 import group6.IModule.IStudentUnitRecord;
 import group6.module.student.StudentUnitRecordList;
 
+/**
+ * @author      Abdul Jawwad Patel
+ * @version     1.0                 
+ * Module Class  
+ * It is used to handle course/subject details. Furthermore, it is used to evaluate 
+ * student's grade.
+ */
+
+// This class implements IUnit
 public class Unit implements IUnit {
 	private String uc;
 	private String UN;
@@ -29,7 +38,8 @@ public class Unit implements IUnit {
 		this.setAssessmentWeights(i1, i2, i3);
 		rs = rl == null ? new StudentUnitRecordList() : rl;
 	}
-
+        
+        // Getter and setter methods are used inorder to set value and get value.
 	public String getUnitCode() {
 		return this.uc;
 	}
@@ -99,7 +109,8 @@ public class Unit implements IUnit {
 	public StudentUnitRecordList listStudentRecords() {
 		return rs;
 	}
-
+        
+        // Override methods are used for setting and getting marks weightage.
 	@Override
 	public int getAsg1Weight() {
 		return a1;
@@ -114,7 +125,8 @@ public class Unit implements IUnit {
 	public int getExamWeight() {
 		return ex;
 	}
-
+        
+        //This method perform calculation based on given criteria.
 	@Override
 	public void setAssessmentWeights(int a1, int a2, int ex) {
 		if (a1 < 0 || a1 > 100 ||
@@ -153,6 +165,7 @@ public class Unit implements IUnit {
 
 	}
 	
+        //This method used to get the student grade.
 	public String getGrade(float f1, float f2, float f3) {
 		float t = f1 + f2 + f3;
 		
@@ -162,6 +175,7 @@ public class Unit implements IUnit {
 			throw new RuntimeException("marks cannot be less than zero or greater than assessment weights");
 		}
 
+                // Criteria defined for Grades.
 		if (t < co5) {
 			return "FL";
 		} else if (t < co2)

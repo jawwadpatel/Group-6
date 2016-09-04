@@ -1,0 +1,122 @@
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Task_1 {
+
+    public static void main(String[] args) {
+        //data structures used
+        ArrayList<String> taxRates = new ArrayList<>();
+        HashMap<Integer, Employees> employees = new HashMap<>();
+        //read 'taxrates' file
+        Scanner taxRatesFile = null;
+        try {
+            //open file and read it
+            taxRatesFile = new Scanner(new File("taxrates.txt"));
+            while (taxRatesFile.hasNextLine()) {
+                taxRates.add(taxRatesFile.nextLine());
+            }
+        }//if file not found
+        catch (FileNotFoundException e) {
+            System.out.println("File 'taxrates.txt' not found. please provide and run again.");
+            System.exit(0); // exit program
+        }
+        //create scanner for input 
+        Scanner input = new Scanner(System.in);
+        print();
+        int choice = input.nextInt();
+        System.out.println("");
+        while (choice != 3) {
+            if (choice == 1) {
+                //read employee id and annual salary
+                System.out.print("Enter employee id: ");
+                int id = input.nextInt();
+                System.out.print("Enter employee annual income: ");
+                double annualIncome = input.nextDouble();
+                //calculate tax from annual salary
+                double tax = 0;
+                if (annualIncome > 180000) {
+                    tax = 54547 + 0.45 * (annualIncome - 180000);
+                } else if (annualIncome > 80000) {
+                    tax = 17547 + 0.37 * (annualIncome - 80000);
+                } else if (annualIncome > 37000) {
+                    tax = 3572 + 0.325 * (annualIncome - 37000);
+                } else if (annualIncome > 182000) {
+                    tax = 0.19 * (annualIncome - 18200);
+                }
+                //create and add employee
+                Employee emp = new Employee(id, annualIncome, tax);
+                employees.put(id, emp);
+                //write to file
+                writeReport(employees);
+            } // if search tax selected
+            else if (choice == 2) {
+                System.out.print("Enter employee id: ");
+                int id = input.nextInt();
+                //read from file
+                readReport(id);
+            } else {
+                System.out.println("Wrong choice, try again.");
+            }
+            print();
+            choice = input.nextInt();
+            System.out.println("");
+        }
+    }
+
+    //print menu for user
+    private static void print() {
+        System.out.println("");
+        System.out.println("##################################################");
+        System.out.println("Please select one of the following options:");
+        System.out.println("  1. Calculate tax");
+        System.out.println("  2. Search tax");
+        System.out.println("  3. Exit");
+        System.out.print("  >>>>>> ");
+    }
+
+    //write report adter each calculate tax
+    private static void writeReport(HashMap<Integer, Employee> employees) {
+        try {
+            //create file to write to
+            PrintWriter output = new PrintWriter(new File("taxreport.txt"));
+            //write header
+            output.println("Employee Id\t\tTaxable Income\t\tTax");
+            //write employees info
+            for (Employee employee : employees.values()) {
+                output.println(employee);
+            }
+            output.close(); // close file
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    //read employee tax from file using his id
+    private static void readReport(int id) {
+        try {
+            //create file to read from
+            Scanner input = new Scanner(new File("taxreport.txt"));
+            //read in file
+            while (input.hasNextLine()) {
+                String line = input.nextLine();
+                //if found, print tax and exit method
+                if (line.startsWith("" + id)) {
+                    System.out.println("Employee tax is $" + line.split("\t\t")[2]);
+                    input.close();
+                    return;
+                }
+            }
+            //if not found, print not found
+            System.out.println("Employee not found");
+            input.close(); // close file
+        } catch (FileNotFoundException ex) {
+            System.out.println("File 'taxreport.txt' not found. Please provide it.");
+        }
+    }
+}
