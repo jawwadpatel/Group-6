@@ -5,8 +5,7 @@
          * @author      Abdul Jawwad Patel
          * @version     1.0                 
          * Module Class  
-         * It is used to handle course/subject details. Furthermore, it is used to evaluate 
-         * student's grade.
+         * It is used to handle only hashmap class
          */
 
     // Create class and used hashmap for unique records
